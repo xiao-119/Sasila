@@ -13,7 +13,7 @@ class SpiderCore(object):
         # self.pipeline = Pipeline(spider)
         # self.spider_task = SpiderTask(spider)
         # self.spider_task.add_task(spider.start_urls)
-        self.scheduler.append(*processor.start_requests)
+        self.scheduler.extend(processor.start_requests)
 
     def _crawler(self):
         while self.scheduler:
